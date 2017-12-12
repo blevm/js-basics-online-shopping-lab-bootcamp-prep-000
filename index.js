@@ -53,7 +53,7 @@ function viewCart() {
 function total() {
   let cartTotal = 0;
 
-  for (let cartIndex = 0, l = cart.length; cartIndex < l; i++) {
+  for (let cartIndex = 0, l = cart.length; cartIndex < l; cartIndex++) {
     for (let item in cart[cartIndex]) {
       cartTotal += cart[cartIndex][item];
   }
