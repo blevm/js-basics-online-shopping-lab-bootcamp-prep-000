@@ -57,8 +57,8 @@ function total() {
   let total = 0;
 
   for (let cartIndex = 0; cartIndex < cartLength; cartIndex++) {
-    for (let item in cart[cartIndex]) {
-      total += cart[cartIndex][item];
+    for (let itemName in cart[cartIndex]) {
+      total += cart[cartIndex][itemName];
 }
 
 function removeFromCart(item) {
