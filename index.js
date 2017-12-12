@@ -53,9 +53,9 @@ function viewCart() {
 function total() {
   let cartTotal = 0;
 
-  for (let cartIndex = 0; cartLength = cart.length; cartIndex < cartLength; cartIndex++) {
-    for (let item in cart[cartIndex]) {
-      cartTotal += cart[cartIndex][item];
+  for (let i = 0; l = cart.length; i < l; i++) {
+    for (let item in cart[i]) {
+      cartTotal += cart[i][item];
   }
 }
   return cartTotal;
