@@ -53,7 +53,7 @@ function viewCart() {
 function total() {
   let cartTotal = 0;
 
-  for (let cartIndex = 0, l = cart.length; cartIndex < l; cartIndex++) {
+  for (let cartIndex = 0, cartLength = cart.length; cartIndex < cartLength; cartIndex++) {
     for (let item in cart[cartIndex]) {
       cartTotal += cart[cartIndex][item];
   }
@@ -65,11 +65,11 @@ function total() {
 function removeFromCart(item) {
   let itemInCart = false;
 
-  for (let cartIndex = 0, l = cart.length; cartIndex < l; cartIndex++) {
+  for (let cartIndex = 0, cartLength = cart.length; cartIndex < cartLength; cartIndex++) {
     if (cart[cartIndex].hasOwnProperty(item)) {
       itemInCart = true;
       cart = cart.slice(0, cartIndex).concat(cart.slice(cartIndex + 1));
-      l--;
+      cartLength--;
     }
   }
 
