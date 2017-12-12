@@ -53,9 +53,9 @@ function viewCart() {
 function total() {
   let cartTotal = 0;
 
-  for (let i = 0, l = cart.length; i < l; i++) {
-    for (let item in cart[i]) {
-      cartTotal += cart[i][item];
+  for (let cartIndex = 0, l = cart.length; cartIndex < l; i++) {
+    for (let item in cart[cartIndex]) {
+      cartTotal += cart[cartIndex][item];
   }
 }
   return cartTotal;
@@ -65,10 +65,10 @@ function total() {
 function removeFromCart(item) {
   let itemInCart = false;
 
-  for (let i = 0, l = cart.length; i < l; i++) {
-    if (cart[i].hasOwnProperty(item)) {
+  for (let cartIndex = 0, l = cart.length; cartIndex < l; cartIndex++) {
+    if (cart[cartIndex].hasOwnProperty(item)) {
       itemInCart = true;
-      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+      cart = cart.slice(0, cartIndex).concat(cart.slice(cartIndex + 1));
       l--;
     }
   }
