@@ -9,12 +9,12 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(itemName) {
+function addToCart(item) {
   const itemPrice = Math.floor(Math.random() * 100) + 1;
 
-  cart.push({ [itemName]: itemPrice });
+  cart.push({ [item]: itemPrice });
 
-  console.log(`${itemName} has been added to your cart.`);
+  console.log(`${item} has been added to your cart.`);
 
   return cart;
 }
@@ -51,13 +51,15 @@ function viewCart() {
 }
 
 function total() {
-  const cartLength = cart.length;
+  let cartTotal = 0;
 
-  let total = 0;
+  for (let cartIndex = 0; cartLength = cart.length; cartIndex < cartLength; cartIndex++) {
+    for (let item in cart[cartIndex]) {
+      cartTotal += cart[cartIndex][item];
+  }
+}
+  return t;
 
-  for (let cartIndex = 0; cartIndex < cartLength; cartIndex++) {
-    for (let itemName in cart[cartIndex]) {
-      total += cart[cartIndex][itemName];
 }
 
 function removeFromCart(item) {
