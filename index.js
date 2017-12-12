@@ -65,11 +65,11 @@ function total() {
 function removeFromCart(item) {
   let itemInCart = false;
 
-  for (let i = 0, l = cart.length; i < l; i++) {
-    if (cart[i].hasOwnProperty(item)) {
+  for (let cartIndex = 0, cartLength = cart.length; cartIndex < cartLength; cartIndex++) {
+    if (cart[cartIndex].hasOwnProperty(item)) {
       itemInCart = true;
-      cart = cart.slice(0, i).concat(cart.slice(i + 1));
-      l--;
+      cart = cart.slice(0, cartIndex).concat(cart.slice(cartIndex + 1));
+      cartLength--;
     }
   }
 }
