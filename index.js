@@ -58,7 +58,7 @@ function total() {
       cartTotal += cart[cartIndex][item];
   }
 }
-  return t;
+  return cartTotal;
 
 }
 
